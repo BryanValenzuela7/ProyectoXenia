@@ -6,6 +6,14 @@ body{
     background-size: cover;
     height: 100vh;
 }
+
+.desplegable {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Para ocupar toda la altura del contenedor */
+}
 .desplegable{
     background: #023E8A 
     ;
@@ -104,20 +112,9 @@ ul li a:hover{
         color: #ffffff; /* Color por defecto del icono */
     }
     
-    /* Estilo para la X */
     .icono.colocar_x {
         color: #ff0000; /* Cambia a rojo cuando el menú está abierto */
     }
     
 }
 
-@media (max-width: 500px){
-    .desplegable{
-        width: 100%;
-        height: 100vh;
-        font-size: 1.6rem;
-    }
-    button{
-        margin: 10px 10px 10px 15px;
-    }
-}
