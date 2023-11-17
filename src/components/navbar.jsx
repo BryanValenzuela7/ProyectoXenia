@@ -13,7 +13,7 @@ const Navbar = () => {
         <div>
             <header>
                 <div className="barras">
-                    <button onClick={abrirCerrarMenu} className="boton_menu" id='x'>
+                    <button onClick={abrirCerrarMenu} className="boton_menu " id='x'>
                         {menuAbierto ? (
                             <span className="icono">&#215;</span>
                         ) : (
