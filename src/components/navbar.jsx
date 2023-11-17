@@ -23,8 +23,8 @@ const Navbar = () => {
                 </div>
                 <nav id='menu' className={`desplegable ${menuAbierto ? 'abrir_menu' : ''}`}>
                     <ul>
-                        <li><a href="">INICIO</a></li>
-                        <li><a href="#">EJEMPLO</a></li>
+                        <li><a href="/">INICIO</a></li>
+                        <li><a href="/fetcheo">ESTUDIANTES</a></li>
                         <li><a href="#">EJEMPLO</a></li>
                         <li><a href="#">EJEMPLO</a></li>
                     </ul>
