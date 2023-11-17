@@ -1,15 +1,14 @@
 'use client'
 import React from "react";
-import './footer.css'; // Asegúrate de tener un archivo CSS para los estilos del footer
 
-const footer = () => {
+const Footer = () => {
     return (
-        <footer className="footer">
-            <div className="container">
+        <footer className="bg-gray-800 text-white py-5 mt-64 text-center">
+            <div className="max-w-2xl mx-auto">
                 <p>&copy; 2023 ITE. Todos los derechos reservados.</p>
             </div>
         </footer>
     );
 }
 
-export default footer;
+export default Footer;
