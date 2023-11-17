@@ -1,0 +1,5 @@
+.formulario-con-sombra {
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1); /* Ajusta los valores según tus preferencias */
+    height: auto;
+    background-color: #1b396a;
+  }
