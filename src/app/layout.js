@@ -2,6 +2,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import InicioSesion from '@/components/login'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,9 +15,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" style={{ height: '100%' }}>
       <body className={inter.className} style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', margin: 0 }}>
-        <Navbar />
-        <main style={{ flex: 1 }}>{children}</main>
-        <Footer />
+        <main style={{ flex: 1 }}>{children}
+        <InicioSesion/>
+        </main>
       </body>
     </html>
   )

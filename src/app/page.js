@@ -1,7 +1,4 @@
-import Formulario from '@/components/Formulario'
-import Footer from '@/components/Footer'
-import Navbar from '@/components/Navbar'
-
+import react from "react"
 
 export default function Home() {
   return (
