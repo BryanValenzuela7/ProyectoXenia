@@ -19,9 +19,18 @@ model Dependencia {
   cargo_puesto       String
   departamento_area  String
   personas           Persona[]
+  usuarios           Usuarios[]
 }
 
 model Persona {
+  id            String      @id @default(uuid())
+  nombre        String
+  puesto        String
+  correo        String
+  dependencia   Dependencia[]
+}
+
+model Usuarios {
   id            String      @id @default(uuid())
   nombre        String
   puesto        String
@@ -36,6 +45,6 @@ model Login {
   id       String  @id @default(uuid())
   username String
   password String
-  persona  Persona @relation(fields: [personaId], references: [id])
-  personaId String @unique
+  usuarios  Usuarios @relation(fields: [usuariosId], references: [id])
+  usuariosId String @unique
 }
