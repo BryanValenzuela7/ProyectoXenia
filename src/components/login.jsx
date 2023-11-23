@@ -23,7 +23,7 @@ const InicioSesion = () => {
 
   return (
     <div className='font-poppins flex items-center justify-center min-h-screen bg-gradient-to-r from-blueClaro to-blueOscuro'>
-        <div className='p-6 md:p-12 rounded shadow-md max-w-md w-full bg-white flex flex-col'>
+        <div className='mt-4 mb-4 p-6 md:p-12 rounded shadow-md max-w-md w-full bg-white flex flex-col'>
             <img
             src='https://img.freepik.com/vector-gratis/ilustracion-concepto-inicio-sesion_114360-757.jpg?w=900&t=st=1700554020~exp=1700554620~hmac=e25e01cfc8235417baed8c12496c6cb2f2a2dad3334066cfa0b54b8438e817a4'
             alt='Login'
