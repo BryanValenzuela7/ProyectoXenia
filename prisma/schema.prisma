@@ -22,9 +22,20 @@ model Dependencia {
 }
 
 model Persona {
-  id          String        @id @default(uuid())
-  nombre      String
-  puesto      String
-  correo      String
-  dependencia Dependencia[]
+  id            String      @id @default(uuid())
+  nombre        String
+  puesto        String
+  correo        String
+  dependencia   Dependencia @relation(fields: [dependenciaId], references: [id])
+  dependenciaId String
+
+  login Login?
+}
+
+model Login {
+  id       String  @id @default(uuid())
+  username String
+  password String
+  persona  Persona @relation(fields: [personaId], references: [id])
+  personaId String @unique
 }
