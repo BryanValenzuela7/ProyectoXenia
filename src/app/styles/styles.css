@@ -1,0 +1,25 @@
+.formulario-con-sombra{
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    background-color: #005187;
+   
+}
+.text-center{
+    text-align: center;
+}
+.input-container {
+    position: relative;
+  }
+  
+  .image-input {
+    padding-right: 30px; /* Espacio para la imagen */
+  }
+  
+  .input-image {
+    position: absolute;
+    top: 75%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 20px; /* Ajusta el tamaño de la imagen según tus necesidades */
+    height: 20px;
+  }
