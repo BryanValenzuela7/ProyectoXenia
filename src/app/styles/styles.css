@@ -7,19 +7,3 @@
 .text-center{
     text-align: center;
 }
-.input-container {
-    position: relative;
-  }
-  
-  .image-input {
-    padding-right: 30px; /* Espacio para la imagen */
-  }
-  
-  .input-image {
-    position: absolute;
-    top: 75%;
-    right: 10px;
-    transform: translateY(-50%);
-    width: 20px; /* Ajusta el tamaño de la imagen según tus necesidades */
-    height: 20px;
-  }
