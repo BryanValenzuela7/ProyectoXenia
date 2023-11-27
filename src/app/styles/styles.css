@@ -4,6 +4,14 @@
     background-color: #005187;
    
 }
-.text-center{
+.header{
     text-align: center;
 }
+.footer{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+  
+  
+  
