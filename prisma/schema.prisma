@@ -37,14 +37,10 @@ model Usuarios {
   correo        String
   dependencia   Dependencia @relation(fields: [dependenciaId], references: [id])
   dependenciaId String
-
-  login Login?
 }
 
 model Login {
   id       String  @id @default(uuid())
-  username String
+  username String  @unique
   password String
-  usuarios  Usuarios @relation(fields: [usuariosId], references: [id])
-  usuariosId String @unique
 }
