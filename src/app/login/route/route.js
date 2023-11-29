@@ -1,6 +1,11 @@
 import {NextResponse} from "next/server"
 import { prisma } from "@/libs/prisma"
 
+export async function GET(){
+    const login = await prisma.login.findMany()
+    return NextResponse.json(login)
+}
+
 export async function POST(request){
     try{
         const {username, password} = await request.json()

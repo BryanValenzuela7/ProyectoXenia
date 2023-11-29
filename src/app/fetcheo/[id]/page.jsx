@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
-import Formulario from "@/components/Formulario";
+import Formulario from "@/app/formulario/page";
 
 async function consultarDatosProducto(id) {
   const response = await fetch(`https://dummyjson.com/products/${id}`);
