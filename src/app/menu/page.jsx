@@ -6,13 +6,15 @@ const MenuPrincipal = () => {
 
   return (
 
-    <div 
-    className="flex flex-col min-h-screen">
-      <NavbarB/>
-      <main className="flex-1">
+
+      <main className="flex-1 bg-black">
+        <div className="flex flex-col min-h-screen">
+          <div>
+            <p>Hola</p>
+          </div>
+        </div>
       </main>
-      <Footer/>
-    </div>
+
 
   );
 

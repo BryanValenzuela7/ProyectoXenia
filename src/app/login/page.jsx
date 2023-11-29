@@ -4,10 +4,9 @@ import Modal from 'react-modal';
 import '../globals.css'
 import { useState } from 'react'
 import MenuPrincipal from '../menu/page'
+import RootLayout from '../layout';
 
-Modal.setAppElement('#root');
-
-const page = () => {
+const page = ({ mostrarMenuPrincipal }) => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [menuPrincipal, setMenuPrincipal] = useState(false)
@@ -54,9 +53,9 @@ const page = () => {
       }
     }
 
-    if(menuPrincipal){
+    /*if(menuPrincipal){
       return <MenuPrincipal/>
-    }
+    }*/
 
   return (
     <div className='font-poppins flex items-center justify-center min-h-screen bg-gradient-to-r from-blueClaro to-blueOscuro'>
@@ -115,7 +114,8 @@ const page = () => {
                   <button
                     className='text-white bg-blue-500 rounded py-2 hover:bg-blue-600 focus:shadow-outline w-20'
                     onClick={() => {
-                      setMenuPrincipal(true);
+                      //setMenuPrincipal(true);
+                      mostrarMenuPrincipal(false)
                       cerrarModal();
                     }}
                   >
@@ -124,7 +124,6 @@ const page = () => {
                 )}
                 </div>
             </Modal>
-
         </div>
     </div>
   )
