@@ -37,7 +37,7 @@ const Formulario = () => {
   const [domicilio, setDomicilio] = useState("");
   const [telefono, setTelefono] = useState("");
   const [nombre_titular, setNombre_Titular] = useState("");
-  const [cargo_puesto, setCargo_Puesto] = useState(second);
+  const [cargo_puesto, setCargo_Puesto] = useState("");
   const [departamento_area, setDepartamento_Area] = useState("");
 
   useEffect(() => {
@@ -52,7 +52,7 @@ const Formulario = () => {
 
   const agregarDatos = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/formulario", {
+      const response = await fetch("http://localhost:3000/app/formulario", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -76,7 +76,7 @@ const Formulario = () => {
         setPuesto("");
         setCorreo("");
         setCargo_Puesto("");
-        setDomicilio("")
+        setDomicilio("");
         setNombre_Dependencia("");
         setNombre_Titular("");
         setTelefono("");
@@ -125,7 +125,7 @@ const Formulario = () => {
           <button
             className="bg-gray-800 text-white mx-10 my-2 px-10 py-2 rounded-md hover:bg-gray-800 focus:outline-none focus:bg-gray-800"
             onClick={() => {
-              setPage((currPage) => currPage - 1);
+              setPage((currPage) => Math.max(currPage - 1, 0));
             }}
           >
             Prev
@@ -133,11 +133,11 @@ const Formulario = () => {
           <button
             className="bg-gray-800 text-white mx-10 my-2 px-10 py-2 rounded-md hover:bg-gray-800 focus:outline-none focus:bg-gray-800"
             onClick={() => {
-              setPage((currPage) => currPage + 1);
+              setPage((currPage) => Math.min(currPage + 1, 1));
             }}
             onSubmit={handleSubmit}
           >
-            Next
+            {page === 1 ? "Submit" : "Next"}
           </button>
         </div>
       </div>

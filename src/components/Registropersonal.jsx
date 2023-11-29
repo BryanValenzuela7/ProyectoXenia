@@ -1,7 +1,13 @@
 import React from "react";
 import "../app/styles/styles.css";
 
-function Registropersonal({ formData, setFormData }) {
+function Registropersonal({
+  formData,
+  setFormData,
+  setNombre,
+  setPuesto,
+  setCorreo,
+}) {
   return (
     <div className="flex justify-center m-8">
       <form className="flex flex-col sm:grid-cols-2 gap-4 place-content-stretch py-8 formulario-con-sombra rounded-md">
@@ -18,7 +24,11 @@ function Registropersonal({ formData, setFormData }) {
             placeholder="Responsable"
             value={formData.encargado}
             onChange={(event) =>
-              setFormData({ ...formData, encargado: event.target.value })
+              setFormData({
+                ...formData,
+                encargado: event.target.value,
+                setNombre,
+              })
             }
             className="bg-slate-100 text-black p-2 rounded-md w-full"
           />
@@ -33,7 +43,7 @@ function Registropersonal({ formData, setFormData }) {
             placeholder="Puesto"
             value={formData.rol}
             onChange={(event) =>
-              setFormData({ ...formData, rol: event.target.value })
+              setFormData({ ...formData, rol: event.target.value, setPuesto })
             }
             className="bg-slate-100 text-black p-2 rounded-md w-full"
           />
@@ -48,7 +58,11 @@ function Registropersonal({ formData, setFormData }) {
             placeholder="Contacto"
             value={formData.correo}
             onChange={(event) =>
-              setFormData({ ...formData, correo: event.target.value })
+              setFormData({
+                ...formData,
+                correo: event.target.value,
+                setCorreo,
+              })
             }
             className="bg-slate-100 text-black p-2 rounded-md w-full"
           />
