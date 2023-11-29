@@ -3,7 +3,9 @@ import React from 'react'
 import Modal from 'react-modal';
 import '../globals.css'
 import { useState } from 'react'
-import MenuPrincipal from '../../components/menuPrincipal'
+import MenuPrincipal from '../menu/page'
+
+Modal.setAppElement('#root');
 
 const page = () => {
     const [username, setUsername] = useState('')

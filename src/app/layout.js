@@ -3,6 +3,7 @@ import './globals.css'
 import Footer from '@/components/Footer'
 import InicioSesion from '@/app/login/page'
 import NavbarB from '@/components/NavbarB'
+import MenuPrincipal from './menu/page'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,12 +16,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" style={{ height: '100%' }}>
       <body className=  {inter.className}  style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', margin: 0 }}>
-      <NavbarB/>
-
         <main className="bg-[#E1E5F2]"style={{ flex: 1 }}>{children}  
-        
+        <div id='root'></div>
+        <InicioSesion/>
         </main>
-        <Footer/>
       </body>
     </html>
   )
