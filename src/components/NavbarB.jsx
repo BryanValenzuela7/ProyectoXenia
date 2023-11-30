@@ -4,7 +4,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import "../app/styles/Navbar.css";
 import Link from "next/link";
 
-function NavbarB() {
+function NavbarB({ocultarMenuPrincipal}) {
 	const navRef = useRef();
 
 	const showNavbar = () => {
@@ -12,6 +12,10 @@ function NavbarB() {
 			"responsive_nav"
 		);
 	};
+
+	const handleLinkClick = () => {
+		ocultarMenuPrincipal(false);
+	}
 
 	return (
 		<header>
@@ -21,7 +25,9 @@ function NavbarB() {
 			<nav ref={navRef}>
 				<a href="/">LOGIN</a>
 				<Link href="/menu" passHref><p>MENU</p></Link>
+				<div onClick={handleLinkClick}>
 				<Link href="/formulario" passHref><p>FORMULARIO</p></Link>
+				</div>
 				<Link href="/fetcheo" passHref><p>ESTUDIANTES</p></Link>
 				<button
 					className="nav-btn nav-close-btn"
