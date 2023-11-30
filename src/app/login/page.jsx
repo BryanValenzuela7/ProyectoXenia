@@ -119,7 +119,7 @@ const page = ({ mostrarMenuPrincipal }) => {
                       cerrarModal();
                     }}
                   >
-                    Ir al Menú Principal
+                    Continuar
                   </button>
                 )}
                 </div>

@@ -15,7 +15,9 @@ function NavbarB() {
 
 	return (
 		<header>
-			<h3>LOGO</h3>
+			{/* Aquí colocamos la imagen del logo */}
+			<img src="https://pinotepa.tecnm.mx/wp-content/uploads/2020/03/LOGO_TECNM_BLANCO.png" alt="Logo" className="logo" />
+
 			<nav ref={navRef}>
 				<a href="/">LOGIN</a>
 				<Link href="/menu" passHref><p>MENU</p></Link>

@@ -8,10 +8,10 @@
 }
 
 :root {
-	--mainColor: #03045E;
+	--mainColor: #023E8A;
 	--mainColorLight: #5767aa;
 	--secondaryColor: #48CAE4;
-	--textColor: #eee;
+	--textColor: rgb(255, 251, 34);
 }
 
 header {
@@ -24,8 +24,13 @@ header {
 	color: var(--textColor);
 }
 
+header img.logo {
+  width: 100px; /* Puedes ajustar este valor según sea necesario */
+  height: auto;
+  margin-left: 1px; /* Esto asegura que la altura se ajuste automáticamente para mantener la proporción original */
+}
 nav a {
-	margin: 0 1rem;
+	margin: 8px;
 	color: var(--textColor);
 	text-decoration: none;
 }
