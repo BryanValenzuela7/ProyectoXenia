@@ -10,37 +10,21 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Dependencia {
-  id                 String    @id @default(uuid())
+model DatosUsuario {
+  id                 String @id @default(uuid())
+  nombre             String
+  puesto             String
+  correo             String
   nombre_dependencia String
   domicilio          String
   telefono           String
   nombre_titular     String
   cargo_puesto       String
   departamento_area  String
-  personas           Persona[]
-  usuarios           Usuarios[]
-}
-
-model Persona {
-  id            String      @id @default(uuid())
-  nombre        String
-  puesto        String
-  correo        String
-  dependencia   Dependencia[]
-}
-
-model Usuarios {
-  id            String      @id @default(uuid())
-  nombre        String
-  puesto        String
-  correo        String
-  dependencia   Dependencia @relation(fields: [dependenciaId], references: [id])
-  dependenciaId String
 }
 
 model Login {
-  id       String  @id @default(uuid())
-  username String  @unique
+  id       String @id @default(uuid())
+  username String @unique
   password String
 }
