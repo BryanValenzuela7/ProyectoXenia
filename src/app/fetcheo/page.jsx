@@ -1,18 +1,23 @@
-import React from 'react'
-
-import { obtenerProductosDummy } from '@/libs/index-fetch'
-import Renderizado from '@/components/Renderizado'
-
-
+import React from 'react';
+import { obtenerProductosDummy } from '@/libs/index-fetch';
+import Renderizado from '@/components/Renderizado';
 
 const DummyJsonPage = async () => {
-    const data = await obtenerProductosDummy()
-    const products = data.products
-  return (
-    <div className='flex flex-wrap -m-4'>
-    {products.map((producto) =>  <Renderizado producto={producto}/>)}
-    </div>
-  )
-}
+  try {
+    const data = await obtenerProductosDummy(`?timestamp=${Date.now()}`);
+    const products = data;
 
-export default DummyJsonPage
+    return (
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        {products.map((producto) => (
+          <Renderizado key={producto.id} producto={producto} />
+        ))}
+      </div>
+    );
+  } catch (error) {
+    console.error('Error al obtener productos:', error);
+    return <div>Error al cargar los productos</div>;
+  }
+};
+
+export default DummyJsonPage;

@@ -1,6 +1,4 @@
 export async function obtenerProductosDummy(){
-    const response = await fetch('https://dummyjson.com/products')
-    if(!response.ok ) throw new Error('No se pudieron obtener los productos')
-    return response.json()
-
+    const nuevoUser = await fetch("http://localhost:3000/api/datosusuario");
+    return nuevoUser.json();
 }
