@@ -22,6 +22,7 @@ header {
 	padding: 30px;
 	background-color: var(--mainColor);
 	color: var(--textColor);
+	z-index: 1000;
 }
 
 header img.logo {

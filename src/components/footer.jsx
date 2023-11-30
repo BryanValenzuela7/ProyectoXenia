@@ -4,6 +4,7 @@ import Link from "next/link";
 import "../app/styles/Footer.css";
 
 const Footer = () => {
+  
   return (
     <div>
       <footer className="custom-footer">
@@ -43,7 +44,7 @@ const Footer = () => {
             <p className="phone-container"><FaInstagram className="phone-icon"/>Salazar Silva Juan Carlos</p>
             <p className="phone-container"><FaInstagram className="phone-icon"/>San Miguel Osorio Jesus Elian</p>
             <p className="phone-container"><FaInstagram className="phone-icon"/>Lopez Campuzano Pedro Adrian</p>
-            <p className="phone-container"><FaInstagram className="phone-icon"/>Valenzuela Ramirez Bryan</p>
+            <p className="phone-container"><FaInstagram className="phone-icon"/>Valenzuela Encinas Bryan</p>
             
             <br></br>
             <br></br>
