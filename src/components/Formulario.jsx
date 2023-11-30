@@ -82,80 +82,116 @@ const Formulario = () => {
   };
 
   return (
-    <div className="shadow-lg formulario-con-sombra2 p-8">
-      <form className="formulario-con-sombra p-8" onSubmit={handleSubmit}>
-        <input
-          className="mb-8 input text-black"
-          type="text"
-          value={nombre}
-          onChange={(e) => setNombre(e.target.value)}
-          placeholder="Responsable"
-          required
-        ></input>
-        <input
-          className="mb-8 input text-black"
-          type="text"
-          value={puesto}
-          onChange={(e) => setPuesto(e.target.value)}
-          placeholder="Puesto"
-          required
-        ></input>
-        <input
-          className="mb-8 input text-black"
-          type="text"
-          value={correo}
-          onChange={(e) => setCorreo(e.target.value)}
-          placeholder="Contacto"
-          required
-        ></input>
-        <input
-          className="mb-8 input text-black"
-          type="text"
-          value={nombre_dependencia}
-          onChange={(e) => setNombre_Dependencia(e.target.value)}
-          placeholder="Lugar"
-          required
-        ></input>
-        <input
-          className="mb-8 input text-black"
-          type="text"
-          value={domicilio}
-          onChange={(e) => setDomicilio(e.target.value)}
-          placeholder="Direccion"
-          required
-        ></input>
-        <input
-          className="mb-8 input text-black"
-          type="text"
-          value={telefono}
-          onChange={(e) => setTelefono(e.target.value)}
-          placeholder="Telefono"
-          required
-        ></input>
-        <input
-          className="mb-8 input text-black"
-          type="text"
-          value={nombre_titular}
-          onChange={(e) => setNombre_Titular(e.target.value)}
-          placeholder="Propietario"
-          required
-        ></input>
-        <input
-          className="mb-8 input text-black"
-          type="text"
-          value={cargo_puesto}
-          onChange={(e) => setCargo_Puesto(e.target.value)}
-          placeholder="Ocupacion"
-          required
-        ></input>
-        <input
-          className="mb-8 input text-black"
-          type="text"
-          value={departamento_area}
-          onChange={(e) => setDepartamento_Area(e.target.value)}
-          placeholder="Seccion"
-          required
-        ></input>
+    <div className="shadow-lg formulario-con-sombra2 p-8 ">
+      <h1 className="text-center p-8">Registro</h1>
+      <form
+        className="formulario-con-sombra p-8 grid justify-items-center "
+        onSubmit={handleSubmit}
+      >
+        <div className="grid gap-4 grid-cols-2 p-8 ">
+          <div className="text-white">
+            <label htmlFor="responsable">Nombre</label>
+            <input
+              id="responsable"
+              className="mb-8 p-2 input text-black flex-initial w-64"
+              type="text"
+              value={nombre}
+              onChange={(e) => setNombre(e.target.value)}
+              placeholder="Responsable"
+              required
+            />
+          </div>
+          <div className="text-white">
+            <label htmlFor="puesto">Rol</label>
+            <input
+              id="puesto"
+              className="mb-8 p-2 input text-black flex-initial w-64"
+              type="text"
+              value={puesto}
+              onChange={(e) => setPuesto(e.target.value)}
+              placeholder="Puesto"
+              required
+            />
+          </div>
+          <div className="text-white">
+            <label htmlFor="contacto">Contacto</label>
+            <input
+              id="contacto"
+              className="mb-8 p-2 input text-black flex-initial w-64"
+              type="text"
+              value={correo}
+              onChange={(e) => setCorreo(e.target.value)}
+              placeholder="Correo"
+              required
+            />
+          </div>
+          <div className="text-white">
+            <label htmlFor="Lugar">Dependencia</label>
+            <input
+              className="mb-8 p-2 input text-black flex-initial w-64"
+              type="text"
+              value={nombre_dependencia}
+              onChange={(e) => setNombre_Dependencia(e.target.value)}
+              placeholder="Lugar"
+              required
+            ></input>
+          </div>
+          <div className="text-white">
+            <label className="domicilio">Domicilio</label>
+            <input
+              className="mb-8 p-2 input text-black flex-initial w-64"
+              type="text"
+              value={domicilio}
+              onChange={(e) => setDomicilio(e.target.value)}
+              placeholder="Direccion"
+              required
+            ></input>
+          </div>
+          <div className="text-white">
+            <label htmlFor="telefono">Numero</label>
+            <input
+              className="mb-8 p-2 input text-black flex-initial w-64"
+              type="text"
+              value={telefono}
+              onChange={(e) => setTelefono(e.target.value)}
+              placeholder="Telefono"
+              required
+            ></input>
+          </div>
+          <div className="text-white">
+            <label htmlFor="titular">Nombre encargado</label>
+            <input
+              className="mb-8 p-2 input text-black flex-initial w-64"
+              type="text"
+              value={nombre_titular}
+              onChange={(e) => setNombre_Titular(e.target.value)}
+              placeholder="Propietario"
+              required
+            ></input>
+          </div>
+          <div className="text-white">
+            <label htmlFor="cargo_puesto">Cargo</label>
+            <input
+              className="mb-8 p-2 input text-black flex-initial w-64"
+              type="text"
+              value={cargo_puesto}
+              onChange={(e) => setCargo_Puesto(e.target.value)}
+              placeholder="Ocupacion"
+              required
+            ></input>
+          </div>
+          <div className="text-white">
+            <label htmlFor="Departamento">Departamento</label>
+            <input
+              className="mb-8 p-2 input text-black flex-initial w-64"
+              type="text"
+              value={departamento_area}
+              onChange={(e) => setDepartamento_Area(e.target.value)}
+              placeholder="Seccion"
+              required
+            ></input>
+          </div>
+        </div>
         <button type="submit" className="text-black boton mb-8">
           Enviar
         </button>
