@@ -6,6 +6,8 @@ import { useState } from 'react'
 import MenuPrincipal from '../menu/page'
 import RootLayout from '../layout';
 
+//Modal.setAppElement('#root');
+
 const page = ({ mostrarMenuPrincipal }) => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
@@ -99,6 +101,7 @@ const page = ({ mostrarMenuPrincipal }) => {
               contentLabel='Modal'
               className='absolute top-1/2 left-1/2 transform -translate-x-1/2 bg-blue-100 p-4 rounded shadow-md w-96 border border-gray-300'
               overlayClassName='insert-0 bg-black'
+              ariaHideApp={false}
             >
               <div className='text-center'>
                 <p className='text-black mb-2'>{modalContent}</p>
