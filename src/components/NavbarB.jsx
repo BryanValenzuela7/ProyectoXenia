@@ -28,7 +28,9 @@ function NavbarB({ocultarMenuPrincipal}) {
 				<div onClick={handleLinkClick}>
 				<Link href="/formulario" passHref><p>FORMULARIO</p></Link>
 				</div>
+				<di onClick={handleLinkClick}>
 				<Link href="/fetcheo" passHref><p>ESTUDIANTES</p></Link>
+				</di>
 				<button
 					className="nav-btn nav-close-btn"
 					onClick={showNavbar}>
